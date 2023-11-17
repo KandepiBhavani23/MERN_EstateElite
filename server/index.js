@@ -1,9 +1,18 @@
 import express from "express";
-export const app = express();
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+export const app = express();
+dotenv.config();
+
+mongoose
+  .connect(process.env.MONGODB_URL)
+  .then(() => {
+    console.log("Connected to DB");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 app.listen(8000, () => {
   console.log("Server is running on port 8000");
