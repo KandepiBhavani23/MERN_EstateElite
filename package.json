@@ -1,0 +1,17 @@
+{
+  "name": "estate_elite",
+  "version": "1.0.0",
+  "description": "1. `npm create vite@latest client(client is folder name)`    select framework as **React** and variant as **JavaScript + SWC** 2. Install Tailwind CSS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/index.js",
+    "start": "node server.index.js"
+  },
+  "author": "Kandepi Bhavani",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
